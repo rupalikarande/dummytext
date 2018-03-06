@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+/*panel heading*/
+h1 {
+    text-align:center;
+    font-size: 28px;
+    font-family: 'Lobster', cursive;
+}
+/*panel align center*/
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    padding-top:5px;
+}
+/*property for the bootstrap panel*/
+.panel  {
+-webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.default > .head {
+  color: #000 !important;
+  background: #80bfff; /* For browsers that do not support gradients */
+  
+  background: linear-gradient(to bottom right, #80bfff, #ffffff); /* Standard syntax */
+  border-color: #99ccff !important;
+  height:80px;
+}
+
+/*property for the HTML input placeholder*/
+input:focus::-webkit-input-placeholder { color:transparent; }
+/* input:focus:-moz-placeholder { color:transparent; } 
+input:focus::-moz-placeholder { color:transparent; } 
+input:focus:-ms-input-placeholder { color:transparent; }  */
+
+/*property for reset button*/
+button[type="reset"]    {
+    background-color:transparent;
+    border:1px solid black;
+}
+
+/*Glyphicon color*/
+.blue   {
+    color: #80bfff;
+}
+
+.red{
+    color:red;
+    }
+
+.t1{
+     width: 50px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

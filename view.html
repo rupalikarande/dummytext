@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" class="ng-scope">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" class="ng-scope">
+    <link rel="stylesheet" href="https://cdn.gitcdn.xyz/cdn/angular/bower-material/v1.0.1-master-a687bfc/angular-material.css" class="ng-scope">
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-blue.min.css" class="ng-scope">
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+
+    <h2 style='text-align:center;font-family:Times New Roman, Times, serif;'>View Database</h2>
+    <table id="info_table">
+        <tr>
+               
+            <th onclick="sortTable(0)" class="sortable ng-scope sort-descent" style="text-align: center;" ng-class="{'sort-ascent' : sortOptions.predicate ==='Name' &amp;&amp; sortOptions.direction === 'asc', 'sort-descent' : sortOptions.predicate === 'Name' &amp;&amp; sortOptions.direction === 'desc'}" ng-click="sort('Name')" role="button" tabindex="0">
+            <u><span>Name</u></span></th>
+            <th  onclick="sortTable(1)" class="sortable ng-scope sort-descent" style="text-align: center;" ng-class="{'sort-ascent' : sortOptions.predicate ==='Phone_No' &amp;&amp; sortOptions.direction === 'asc', 'sort-descent' : sortOptions.predicate === 'Phone_No' &amp;&amp; sortOptions.direction === 'desc'}" ng-click="sort('Phone_No')" role="button" tabindex="0">
+            <u><span>Phone</u></span></th>
+            <th  onclick="sortTable(2)" class="sortable ng-scope sort-descent" style="text-align: center;" ng-class="{'sort-ascent' : sortOptions.predicate ==='city' &amp;&amp; sortOptions.direction === 'asc', 'sort-descent' : sortOptions.predicate === 'city' &amp;&amp; sortOptions.direction === 'desc'}" ng-click="sort('city')" role="button" tabindex="0">
+            <u><span>City</span></u></th>
+            <th  onclick="sortTable(3)" class="sortable ng-scope sort-descent" style="text-align: center;" ng-class="{'sort-ascent' : sortOptions.predicate ==='Email' &amp;&amp; sortOptions.direction === 'asc', 'sort-descent' : sortOptions.predicate === 'Email' &amp;&amp; sortOptions.direction === 'desc'}" ng-click="sort('Email')" role="button" tabindex="0">
+            <u><span>Email</span></u></th>
+            <th  onclick="sortTable(4)" class="sortable ng-scope sort-descent" style="text-align: center;" ng-class="{'sort-ascent' : sortOptions.predicate ==='DOB' &amp;&amp; sortOptions.direction === 'asc', 'sort-descent' : sortOptions.predicate === 'DOB' &amp;&amp; sortOptions.direction === 'desc'}" ng-click="sort('DOB')" role="button" tabindex="0">
+            <u><span>Date of Birth</span></u></th>
+            <th  onclick="sortTable(5)" class="sortable ng-scope sort-descent" style="text-align: center;" ng-class="{'sort-ascent' : sortOptions.predicate ==='Address' &amp;&amp; sortOptions.direction === 'asc', 'sort-descent' : sortOptions.predicate === 'Address' &amp;&amp; sortOptions.direction === 'desc'}" ng-click="sort('Address')" role="button" tabindex="0">
+            <u><span>Address</span></u></th>
+           
+        </tr>
+
+    </table>
+
+
+    <script src="js/view.js"></script>
+</body>
+
+</html>
