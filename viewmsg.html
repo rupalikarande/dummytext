@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+   <script src="js/jquery-3.3.1.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+     <!-- Material Design fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- Bootstrap Material Design -->
+<link rel="stylesheet" href="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css">
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://cdn.rawgit.com/HubSpot/tether/v1.3.4/dist/js/tether.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.4/datepicker.css">
+ <script src="js/viewmsg.js"></script>
+<link rel="stylesheet" href="css/main.css">
+    <!-- <script src="date.js"></script> -->
+</head>
+
+
+
+            
+<body>
+ 
+<header>
+<!--Main Navigation-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark blue accent-4 scrolling-navbar">
+        <a class="navbar-brand" href="form.html"><strong>Hotel Name</strong></a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> -->
+        <!-- </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">  -->
+          <!-- date picker -->
+         
+<div class="row">
+    <div class="col">
+    <!--Grid column-->
+      <div class="md-form y1">
+        <div> <input  placeholder="Selected date" name="firstdatepicker" type="text" id="startingDate"  class="form-control datepicker white-text" > </div>
+        <label class="white-text" for="startingDate">To</label>
+       </div>
+    </div>
+    <div class="col">
+            <div class="md-form y1">
+        <!--The "to" Date Picker -->
+        <div> <input placeholder="Selected date" name="lastdatepicker" type="text" id="endingDate"  class="form-control datepicker white-text"></div>
+        <label  class="white-text" for="endingDate">From</label>
+        </div>
+        </div>
+
+    <div class="col">
+                <!--Grid column-->
+                  <div class="y1">
+                                <button  id="myButton" name="Submit" type="submit" class="btn  btn-primary">Submit</button>
+                                <button onclick="window.location.href='modalview.html'" name="All" type="submit" class="btn  btn-primary">All</button>
+                                
+                               
+                    </div>
+    </div>
+        
+</div>
+
+    </nav>
+ 
+</header><br>
+<!-- table -->
+<div class="input-group md-form form-sm form-2 pl-0 mb-0 tab">
+        <input class="form-control my-0 py-1 red-border red-text" style="font-size: 16 cpx;" type="text" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+            <span class="input-group-text waves-effect grey lighten-3" id="basic-addon1">
+                <a><i class="fa fa-search text-red" aria-hidden="true"></i></a>
+            </span>
+        </div>
+   
+</div>
+
+<div class="card tab">
+        <div class="card-body tab"></div>
+     <table class="table table-hover table-striped " id="info_table">
+            <thead >
+                     <tr scope="row">
+                                <th ><u><span>Sr.no</u></span></th>
+                                <th><u><span>Time</u></span></th>
+                                <th ><u><span>Date</u></span></th>
+                                <th ><u><span>Subject</u></span></th>
+                                <th ><u><span>Phone NO</span></u></th>
+                                <th ><u><span>Message</span></u></th>
+                               </tr>
+                    </tr>
+     </table>
+            
+        
+            </div>
+        </div>  
+    </div>
+</div>
+   
+<script >
+    $('.datepicker').pickadate();
+    
+    </script>
+     <script>
+        document.getElementById("myButton").onclick = function () {
+           location.href = "msgreport.php";
+       };
+   </script>
+   
+     
+</body>
+
+</html>
+
+
+priyajadhavc@gmail.com

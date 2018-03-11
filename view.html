@@ -8,12 +8,34 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" class="ng-scope">
     <link rel="stylesheet" href="https://cdn.gitcdn.xyz/cdn/angular/bower-material/v1.0.1-master-a687bfc/angular-material.css" class="ng-scope">
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-blue.min.css" class="ng-scope">
+    <!-- Material Design fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- Bootstrap Material Design -->
+<link rel="stylesheet" href="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css">
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://cdn.rawgit.com/HubSpot/tether/v1.3.4/dist/js/tether.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.4/datepicker.css">
     <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
-
-    <h2 style='text-align:center;font-family:Times New Roman, Times, serif;'>View Database</h2>
-    <table id="info_table">
+    <header>
+    <!--Main Navigation-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark blue accent-4 scrolling-navbar">
+    <a class="navbar-brand" href="form.html"><strong>Hotel Name</strong></a>
+    
+    </nav>
+    </header><br>
+    <h3 style='text-align:center;font-family:Times New Roman, Times, serif;'>View Database</h3>
+    <div class="card tab">
+    <!-- <div class="card-body tab"></div> -->
+    <table class="table table-hover table-striped " id="info_table">
         <tr>
                
             <th onclick="sortTable(0)" class="sortable ng-scope sort-descent" style="text-align: center;" ng-class="{'sort-ascent' : sortOptions.predicate ==='Name' &amp;&amp; sortOptions.direction === 'asc', 'sort-descent' : sortOptions.predicate === 'Name' &amp;&amp; sortOptions.direction === 'desc'}" ng-click="sort('Name')" role="button" tabindex="0">
@@ -32,9 +54,33 @@
         </tr>
 
     </table>
+<!--Pagination-->
+<nav aria-label="pagination example">
+    <ul class="pagination pagination-lg">
 
+        <!--Arrow left-->
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
 
-    <script src="js/view.js"></script>
+        <!--Numbers-->
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        
+        <!--Arrow right-->
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<script src="js/view.js"></script>
 </body>
 
 </html>

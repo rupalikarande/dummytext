@@ -3,7 +3,7 @@
      <title>dummy text demo</title>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <!-- Material Design fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -33,88 +33,81 @@ table, th, td {
     </head>
     <body>
       
-  <h2 style="text-align:center;color:blue;font-family:Times New Roman, Times, serif;"><b>Customer Visit Form</b></h2>   
+  <h2 style="text-align:center;color:darkmagenta;font-family:Times New Roman, Times, serif;"><b>Customer Visit Form</b></h2>   
         <div style="margin-left:50px; margin-top:20px; padding:50px; border: 1px solid black; margin-right:50px;"> 
         <div class="row">
               <div class="col-sm-8">
-                <form action="php/form.php" method="post">
-                   <input type="text" id="Name" name="Name"  placeholder=" Name: ">
-                  <input type="text" id="Phone_No" name="Phone_No" placeholder=" Phone No: ">
-                   <input type="text" id="datepicker" name="DOB" placeholder=" Date Of Birth " >
-                    <input type="text" id="Address" name="Address" placeholder=" Address: ">
-                   <input type="text" id="City" name="City" placeholder=" City: ">
-                    <input type="text" id="Email" name="Email" placeholder=" Email: "><br>
-                   <input class="btn btn-default" type="submit" name="Add" value="Add">   
-                  <input class="btn btn-default" type="reset" value="Cancel">
-                  
-                     <!-- modal -->
-                    
-                    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                               
-                            <div class="modal-content">
-                                <div class="modal-header text-center">
-                                    <h4 class="modal-title w-100 font-weight-bold">Custom Message</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body mx-3">
-                                        <form action="php/modal.php" method="post"> 
-                                    <div class="md-form mb-5">
-                                        <i class="fa fa-user prefix grey-text"></i>
-                                        <input type="text" id="form34" placeholder="Subject" class="form-control validate">
-                                        <!-- <label data-error="wrong" data-success="right" for="form34">Subject</label> -->
-                                    </div>
-                    
-                                    <div class="md-form mb-5">
-                                        <i class="fa fa-envelope prefix grey-text"></i>
-                                        <input type="number" id="Contact Number" placeholder="Contact Number" class="form-control validate">
-                                        <!-- <label data-error="wrong" data-success="right" for="form29">Contact Number</label> -->
-                                    </div>
-                    
-                                     <div class="md-form">
-                                        <i class="fa fa-pencil prefix grey-text"></i>
-                                        <textarea type="textarea" id="message" name="Message" placeholder="Your message" class="md-textarea form-control" rows="8"></textarea>
-                                        <!-- <label data-error="wrong" data-success="right" for="form8">Your message</label> -->
-                                    </div>
-                                    <p>
-                                        <span id="remaining"><span><b> 160 </b></span> characters remain </span>
-                                        <span id="messages"><span><b> 1 </b></span> message </span>
-                                    </p> 
-                    
-                                </div>
-                                
-                                <div class="modal-footer d-flex justify-content-center">
-                                    <button class="btn btn-unique">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
-                                </div>
-                            </form>
-                            </div>
-                        
-                        </div>
-        
-                    </div>
-                    
-                    <div >
-                        <!-- <a><input type="submit" name="Viewreport" value="View Message Report" data-toggle="modal" data-target="#modalContactForm">View Message Report</a> -->
-                        <a href="" class="btn btn-default" data-toggle="modal" data-target="#modalContactForm">Message</a> 
-                        <!-- <i><input type="submit" name="msg" value="Message"></i> -->
-                  </div>
-                   <!-- close modal -->
-              </div>
-            
-             <div class="col-sm-4">
-                   <input type="submit" name="View" value="View Database" class="btn btn-default"><br><br> 
-                    <input type="submit" name="Viewreport" value="View Message Report" class="btn btn-default"><br><br>
-                   <input type="submit" name="SendMessage" value="Send Bulk-Message" class="btn btn-default"><br><br> 
-                    <input type="submit" name="DisplayProfile" value="Display Profile" class="btn btn-default"><br><br> 
-                   
-                   
+                <form action="form.php" method="post">
+                        <input class="text-uppercase" type="text" id="Phone_No" name="Phone_No" placeholder=" Phone No: " pattern="^\d{4}\d{2}\d{4}$">
+                   <input class="text-uppercase" type="text" id="Name" name="Name"  placeholder=" Name: ">
+                  <input class="text-uppercase" type="text" id="datepicker" name="DOB" placeholder=" Date Of Birth ">
+                    <input class="text-uppercase" type="text" id="Address" name="Address" placeholder=" Address: ">
+                   <input class="text-uppercase" type="text" id="City" name="City" placeholder=" City: ">
+                    <input type="text" id="Email" name="Email" placeholder=" Email: ">
+                   <input class="btn btn-default" type="submit" name="Add" value="Add" style="width:20%">   
+                  <input class="btn btn-default" type="reset" value="Cancel" style="width:20%" ><br>
+                  <a  class="btn btn-default  c1" data-toggle="modal" data-target="#modalContactForm" style="width:20%"  >Message</a> 
+                </div>   
+                <div class="col-sm-4">
+                        <input class="btn btn-default" type="submit" name="ViewDatabase" value=" View Database "><br><br> 
+                         <input class="btn btn-default" type="submit" name="Viewreport" value=" View Message Report " style="padding-bottom:50px;" ><br><br>
+                        <input class="btn btn-default" type="submit" name="SendMessage" value=" Send Bulk-Message " style="padding-bottom:50px;"><br><br> 
+                         <input class="btn btn-default"  type="submit" name="DisplayProfile" value=" Display Profile " style="padding-bottom:50px;"><br><br> 
+                   </div>
+                     </form>
+                   </div>
              </div>
-                </form>
-              </div>
-        </div>
-        </div>
-        
-    </body>
-   </html>
+            
+              <!-- modal -->
+              <div>
+                     <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                     <div class="modal-content">
+      
+                                      <div class="modal-header text-center">
+                                          <h4 class="modal-title w-100 font-weight-bold">Custom Message</h4>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+      
+                                      <div class="modal-body mx-3">
+                                              <form action="modal.php" method="post"> 
+                                                  
+                                          <div class="md-form mb-5">
+                                              <i class="fa fa-user prefix grey-text"></i>
+                                              <input type="text" id="form34" name="subject" placeholder="Subject" class="form-control validate">
+                                           </div> 
+                          
+                                          <div class="md-form mb-5">
+                                              <i class="fa fa-envelope prefix grey-text"></i>
+                                              <input type="number" name="Phoneno" id="Contact Number" placeholder="Contact Number" class="form-control validate">
+                                          </div>
+                                                            
+                                           <div class="md-form">
+                                              <i class="fa fa-pencil prefix grey-text"></i>
+                                              <textarea type="textarea" id="message" name="Message" placeholder="Your message" class="md-textarea form-control" rows="8"></textarea>
+                                          <p>
+                                              <span id="remaining"><span><b> 160 </b></span> characters remain </span>
+                                              <span id="messages"><span><b> 1 </b></span> message </span>
+                                          </p> 
+                                          <button name="send" class="btn btn-unique">Send <i class="fa fa-paper-plane-o ml-1"></i></button> 
+                                         </div>
+      
+                                      <!-- <div class="modal-footer d-flex justify-content-center"> 
+                                          </div>-->
+                                                </form>
+                                      </div>
+                                  </div>
+                           </div>
+                   </div> 
+               </div> 
+         </body>
+        </html>
+
+           
+               
+            
+            
+            
+             
